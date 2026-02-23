@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "author": "Abdulrahman Fathalla",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-s3-devkitc-1",
+      "id": "esp",
+      "top": -86.58,
+      "left": 62.17,
+      "attrs": { "builder": "esp-idf" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": 12.8,
+      "left": -181.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 90.35,
+      "left": 230.4,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -51.6,
+      "left": 272.6,
+      "attrs": { "color": "red" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "ldr1:VCC", "esp:3V3.2", "red", [ "h28.8", "v-67.2" ] ],
+    [ "ldr1:GND", "esp:GND.1", "black", [ "h28.8", "v105.2" ] ],
+    [ "ldr1:AO", "esp:1", "green", [ "h0", "v220.1", "h192", "v-307.2" ] ],
+    [ "r1:1", "esp:2", "green", [ "v0", "h-28.8", "v-115.2" ] ],
+    [ "r1:2", "led1:A", "green", [ "v0", "h27.6", "v-105.6" ] ],
+    [ "led1:C", "esp:GND.3", "green", [ "v0", "h-47.6", "v-48", "h96", "v201.6" ] ]
+  ],
+  "dependencies": {}
+}
