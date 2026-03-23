@@ -22,7 +22,7 @@
       "id": "r1",
       "top": 90.35,
       "left": 230.4,
-      "attrs": { "value": "1000" }
+      "attrs": { "value": "220" }
     },
     {
       "type": "wokwi-led",
@@ -30,6 +30,13 @@
       "top": -51.6,
       "left": 272.6,
       "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -166.6,
+      "left": 134.4,
+      "attrs": { "color": "green", "xray": "1" }
     }
   ],
   "connections": [
@@ -40,7 +47,9 @@
     [ "ldr1:AO", "esp:1", "green", [ "h0", "v220.1", "h192", "v-307.2" ] ],
     [ "r1:1", "esp:2", "green", [ "v0", "h-28.8", "v-115.2" ] ],
     [ "r1:2", "led1:A", "green", [ "v0", "h27.6", "v-105.6" ] ],
-    [ "led1:C", "esp:GND.3", "green", [ "v0", "h-47.6", "v-48", "h96", "v201.6" ] ]
+    [ "led1:C", "esp:GND.3", "green", [ "v0", "h-47.6", "v-48", "h96", "v201.6" ] ],
+    [ "btn1:1.l", "esp:4", "green", [] ],
+    [ "esp:GND.1", "btn1:2.l", "black", [ "h-48.05", "v-268.8" ] ]
   ],
   "dependencies": {}
 }
