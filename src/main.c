@@ -3,7 +3,7 @@
    Release Type: Interrupt-Driven Task Synchronization
    Class: Real Time Systems - Sp 2026
    Author: Abdulrahman Fathalla
-   AI Use: 
+   AI Use: Used Claude to assist with code structure, debugging, and ISR/semaphore implementation
 ---------------------------------------------------------------*/
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
